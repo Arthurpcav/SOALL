@@ -1,0 +1,2284 @@
+INÍCIO DA BATERIA DE TESTES COMPLETA
+Data: Sun Jun  8 12:25:37 -03 2025
+==========================================================================
+
+PARTE 1: ANÁLISE DAS ESTRUTURAS DE TABELA DE PÁGINAS
+--------------------------------------------------------------------------
+>>> Teste: Tabela=densa, Log=compressor.log, Alg=lru, Mem=1024KB, Pag=4KB
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: densa (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 397
+  Total de páginas escritas (dirty pages): 48
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 8192.00 KB
+  Custo médio de consulta: 1.00 acessos/operação
+-----------------------
+
+>>> Teste: Tabela=hierarquica2, Log=compressor.log, Alg=lru, Mem=1024KB, Pag=4KB
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 397
+  Total de páginas escritas (dirty pages): 48
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Tabela=hierarquica3, Log=compressor.log, Alg=lru, Mem=1024KB, Pag=4KB
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica3 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 397
+  Total de páginas escritas (dirty pages): 48
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 70.00 KB
+  Custo médio de consulta: 3.00 acessos/operação
+-----------------------
+
+>>> Teste: Tabela=invertida, Log=compressor.log, Alg=lru, Mem=1024KB, Pag=4KB
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: invertida (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 397
+  Total de páginas escritas (dirty pages): 48
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 8.00 KB
+  Custo médio de consulta: 1.20 acessos/operação
+-----------------------
+
+==========================================================================
+
+PARTE 2: ANÁLISE COM TAMANHO DE MEMÓRIA VARIÁVEL
+--------------------------------------------------------------------------
+>>> Teste: Log=compilador.log, Alg=lru, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 84401
+  Total de páginas escritas (dirty pages): 11737
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 59089
+  Total de páginas escritas (dirty pages): 8863
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 40821
+  Total de páginas escritas (dirty pages): 6131
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 25308
+  Total de páginas escritas (dirty pages): 4231
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 10425
+  Total de páginas escritas (dirty pages): 2173
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=fifo, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 98067
+  Total de páginas escritas (dirty pages): 16759
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=fifo, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 70315
+  Total de páginas escritas (dirty pages): 12053
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=fifo, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 48526
+  Total de páginas escritas (dirty pages): 8487
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=fifo, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 31698
+  Total de páginas escritas (dirty pages): 5945
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=fifo, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 15609
+  Total de páginas escritas (dirty pages): 3425
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lfu, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 615626
+  Total de páginas escritas (dirty pages): 90190
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lfu, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 283701
+  Total de páginas escritas (dirty pages): 30471
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lfu, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 155253
+  Total de páginas escritas (dirty pages): 18483
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lfu, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 77795
+  Total de páginas escritas (dirty pages): 7987
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lfu, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 22821
+  Total de páginas escritas (dirty pages): 3320
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=random, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 106416
+  Total de páginas escritas (dirty pages): 17361
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=random, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 74964
+  Total de páginas escritas (dirty pages): 12148
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=random, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 51271
+  Total de páginas escritas (dirty pages): 8543
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=random, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 31984
+  Total de páginas escritas (dirty pages): 5793
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=random, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 16251
+  Total de páginas escritas (dirty pages): 3413
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 48254
+  Total de páginas escritas (dirty pages): 9674
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 21656
+  Total de páginas escritas (dirty pages): 5687
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 13250
+  Total de páginas escritas (dirty pages): 3812
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 5673
+  Total de páginas escritas (dirty pages): 1866
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 3632
+  Total de páginas escritas (dirty pages): 1159
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=fifo, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 81638
+  Total de páginas escritas (dirty pages): 18172
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=fifo, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 30422
+  Total de páginas escritas (dirty pages): 7585
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=fifo, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 17523
+  Total de páginas escritas (dirty pages): 4932
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=fifo, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 8551
+  Total de páginas escritas (dirty pages): 2836
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=fifo, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 4850
+  Total de páginas escritas (dirty pages): 1624
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lfu, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 273286
+  Total de páginas escritas (dirty pages): 55818
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lfu, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 192962
+  Total de páginas escritas (dirty pages): 43449
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lfu, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 168728
+  Total de páginas escritas (dirty pages): 39953
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lfu, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 144371
+  Total de páginas escritas (dirty pages): 34887
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lfu, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 91526
+  Total de páginas escritas (dirty pages): 23894
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=random, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 83186
+  Total de páginas escritas (dirty pages): 18178
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=random, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 35549
+  Total de páginas escritas (dirty pages): 8598
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=random, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 18278
+  Total de páginas escritas (dirty pages): 5047
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=random, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 9365
+  Total de páginas escritas (dirty pages): 2925
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=random, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 5168
+  Total de páginas escritas (dirty pages): 1716
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 2133
+  Total de páginas escritas (dirty pages): 702
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 1264
+  Total de páginas escritas (dirty pages): 420
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 771
+  Total de páginas escritas (dirty pages): 224
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 397
+  Total de páginas escritas (dirty pages): 48
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 317
+  Total de páginas escritas (dirty pages): 0
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=fifo, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 2497
+  Total de páginas escritas (dirty pages): 851
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=fifo, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 1467
+  Total de páginas escritas (dirty pages): 514
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=fifo, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 891
+  Total de páginas escritas (dirty pages): 305
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=fifo, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 511
+  Total de páginas escritas (dirty pages): 125
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=fifo, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 317
+  Total de páginas escritas (dirty pages): 0
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lfu, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 416965
+  Total de páginas escritas (dirty pages): 70304
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lfu, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 299501
+  Total de páginas escritas (dirty pages): 45189
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lfu, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 284172
+  Total de páginas escritas (dirty pages): 43252
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lfu, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 372
+  Total de páginas escritas (dirty pages): 29
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lfu, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 317
+  Total de páginas escritas (dirty pages): 0
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=random, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 2589
+  Total de páginas escritas (dirty pages): 853
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=random, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 1600
+  Total de páginas escritas (dirty pages): 545
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=random, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 949
+  Total de páginas escritas (dirty pages): 302
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=random, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 400
+  Total de páginas escritas (dirty pages): 74
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=random, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 317
+  Total de páginas escritas (dirty pages): 0
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 67747
+  Total de páginas escritas (dirty pages): 13730
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 41186
+  Total de páginas escritas (dirty pages): 9672
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 21090
+  Total de páginas escritas (dirty pages): 6526
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 11240
+  Total de páginas escritas (dirty pages): 4092
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 5823
+  Total de páginas escritas (dirty pages): 2444
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=fifo, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 85283
+  Total de páginas escritas (dirty pages): 18805
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=fifo, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 48301
+  Total de páginas escritas (dirty pages): 11936
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=fifo, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 27778
+  Total de páginas escritas (dirty pages): 8346
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=fifo, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 15440
+  Total de páginas escritas (dirty pages): 5426
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=fifo, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: fifo
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 8089
+  Total de páginas escritas (dirty pages): 3353
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lfu, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 711725
+  Total de páginas escritas (dirty pages): 143181
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lfu, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 648703
+  Total de páginas escritas (dirty pages): 126126
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lfu, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 234369
+  Total de páginas escritas (dirty pages): 64484
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lfu, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 197792
+  Total de páginas escritas (dirty pages): 60734
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lfu, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lfu
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 117782
+  Total de páginas escritas (dirty pages): 27633
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=random, Mem=128KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 128 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 88455
+  Total de páginas escritas (dirty pages): 19511
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=random, Mem=256KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 256 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 51702
+  Total de páginas escritas (dirty pages): 12623
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=random, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 29264
+  Total de páginas escritas (dirty pages): 8553
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=random, Mem=1024KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 1024 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 15671
+  Total de páginas escritas (dirty pages): 5437
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=random, Mem=2048KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 2048 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: random
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 9009
+  Total de páginas escritas (dirty pages): 3512
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+==========================================================================
+
+PARTE 3: ANÁLISE COM TAMANHO DE PÁGINA VARIÁVEL
+--------------------------------------------------------------------------
+>>> Teste: Log=compilador.log, Alg=lru, Mem=512KB, Pag=2KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 2 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 32556
+  Total de páginas escritas (dirty pages): 5352
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 40821
+  Total de páginas escritas (dirty pages): 6131
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 2640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=512KB, Pag=8KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 8 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 54286
+  Total de páginas escritas (dirty pages): 8483
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 824.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=512KB, Pag=16KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 16 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 71099
+  Total de páginas escritas (dirty pages): 10932
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 824.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=512KB, Pag=32KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 32 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 91213
+  Total de páginas escritas (dirty pages): 12625
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 236.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compilador.log, Alg=lru, Mem=512KB, Pag=64KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compilador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 64 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 120815
+  Total de páginas escritas (dirty pages): 18745
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 236.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=512KB, Pag=2KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 2 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 7172
+  Total de páginas escritas (dirty pages): 2266
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 13250
+  Total de páginas escritas (dirty pages): 3812
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3248.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=512KB, Pag=8KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 8 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 19141
+  Total de páginas escritas (dirty pages): 5149
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 960.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=512KB, Pag=16KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 16 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 39728
+  Total de páginas escritas (dirty pages): 8268
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 960.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=512KB, Pag=32KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 32 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 153176
+  Total de páginas escritas (dirty pages): 44497
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 268.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=matriz.log, Alg=lru, Mem=512KB, Pag=64KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: matriz.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 64 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 234688
+  Total de páginas escritas (dirty pages): 52498
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 268.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=512KB, Pag=2KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 2 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 642
+  Total de páginas escritas (dirty pages): 128
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 771
+  Total de páginas escritas (dirty pages): 224
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 640.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=512KB, Pag=8KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 8 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 934
+  Total de páginas escritas (dirty pages): 316
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 216.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=512KB, Pag=16KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 16 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 1259
+  Total de páginas escritas (dirty pages): 457
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 216.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=512KB, Pag=32KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 32 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 1811
+  Total de páginas escritas (dirty pages): 593
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 68.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=compressor.log, Alg=lru, Mem=512KB, Pag=64KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: compressor.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 64 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 6248
+  Total de páginas escritas (dirty pages): 952
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 68.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=512KB, Pag=2KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 2 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 15219
+  Total de páginas escritas (dirty pages): 5315
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=512KB, Pag=4KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 4 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 21090
+  Total de páginas escritas (dirty pages): 6526
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 3856.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=512KB, Pag=8KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 8 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 33827
+  Total de páginas escritas (dirty pages): 8922
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 1040.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=512KB, Pag=16KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 16 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 55174
+  Total de páginas escritas (dirty pages): 11928
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 1040.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=512KB, Pag=32KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 32 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 79053
+  Total de páginas escritas (dirty pages): 15439
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 276.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+>>> Teste: Log=simulador.log, Alg=lru, Mem=512KB, Pag=64KB, Tabela=hierarquica2
+Executando o simulador...
+
+--- Relatório Final ---
+Configuração:
+  Arquivo de entrada: simulador.log
+  Tamanho da memória: 512 KB
+  Tamanho das páginas: 64 KB
+  Algoritmo de substituição: lru
+  Estrutura da Tabela de Páginas: hierarquica2 (via PAGE_TABLE_TYPE)
+
+Resultados da Simulação:
+  Total de acessos à memória: 1000000
+  Total de page faults (páginas lidas): 116031
+  Total de páginas escritas (dirty pages): 22713
+
+Análise da Tabela de Páginas:
+  Custo de memória da tabela: 276.00 KB
+  Custo médio de consulta: 2.00 acessos/operação
+-----------------------
+
+==========================================================================
+FIM DA BATERIA DE TESTES.
