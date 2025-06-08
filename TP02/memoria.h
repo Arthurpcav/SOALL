@@ -4,10 +4,9 @@
 #include <stdio.h>
 #include "pagetable.h"
 
-// Estrutura do Frame não muda
 typedef struct {
     int ocupado;
-    unsigned int numero_pagina_virtual; // Renomeado para clareza
+    unsigned int numero_pagina_virtual;
     int suja;
     long ultimo_acesso;
     long frequencia;
